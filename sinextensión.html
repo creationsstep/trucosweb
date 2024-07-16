@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página web sin extensión</title>
+</head>
+<body>
+    <!--Contenido de tu web-->
+    <a href="ruta.html">Ruta</a>
+</body>
+</html>
+<!--Copiar y pegar-->
+<script>
+    // Reemplazar la extensión .html en la barra de búsqueda
+    if (typeof history.pushState === "function") {
+      var urlWithoutExtension = window.location.href.replace(".html", "");
+      history.pushState({}, "", urlWithoutExtension);
+    }
+  </script>
+  <!--Este código se debe pegar en todas las páginas de la web para que en la barra no se vea la extensión de ".html"-->
